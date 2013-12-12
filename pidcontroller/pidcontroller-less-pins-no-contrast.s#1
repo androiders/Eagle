@@ -6632,6 +6632,10 @@ http://www.zetex.com&lt;p&gt;
 <part name="GPIO5" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="GPIO4" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="GPIO3" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0603"/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="R0603"/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="R0603"/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6696,6 +6700,10 @@ http://www.zetex.com&lt;p&gt;
 <instance part="GPIO5" gate="P" x="71.12" y="48.26" rot="R180"/>
 <instance part="GPIO4" gate="P" x="71.12" y="53.34" rot="R180"/>
 <instance part="GPIO3" gate="P" x="71.12" y="58.42" rot="R180"/>
+<instance part="R5" gate="G$1" x="-91.44" y="40.64"/>
+<instance part="R6" gate="G$1" x="-91.44" y="35.56"/>
+<instance part="R7" gate="G$1" x="-91.44" y="30.48"/>
+<instance part="GND8" gate="1" x="-106.68" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -6788,6 +6796,20 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="T4" gate="A" pin="E"/>
 <wire x1="86.36" y1="-10.16" x2="86.36" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="27.94" x2="-106.68" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="30.48" x2="-96.52" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="30.48" x2="-106.68" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="35.56" x2="-96.52" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-106.68" y="30.48"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="35.56" x2="-106.68" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="40.64" x2="-96.52" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-106.68" y="35.56"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -7051,6 +7073,8 @@ http://www.zetex.com&lt;p&gt;
 <segment>
 <pinref part="BTNOK" gate="1" pin="P"/>
 <wire x1="-81.28" y1="43.18" x2="-81.28" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="-86.36" y1="40.64" x2="-81.28" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PD4" class="0">
@@ -7070,7 +7094,9 @@ http://www.zetex.com&lt;p&gt;
 </segment>
 <segment>
 <pinref part="BTNUP" gate="1" pin="P"/>
-<wire x1="-76.2" y1="43.18" x2="-76.2" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="-86.36" y1="35.56" x2="-76.2" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="35.56" x2="-76.2" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PD6" class="0">
@@ -7090,7 +7116,9 @@ http://www.zetex.com&lt;p&gt;
 </segment>
 <segment>
 <pinref part="BTNDN" gate="1" pin="P"/>
-<wire x1="-71.12" y1="43.18" x2="-71.12" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="-86.36" y1="30.48" x2="-71.12" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="30.48" x2="-71.12" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">

@@ -1004,15 +1004,15 @@
 <instance part="LCDCONTR" gate="1" x="55.88" y="38.1"/>
 <instance part="PAD1" gate="1" x="66.04" y="81.28"/>
 <instance part="PAD2" gate="1" x="81.28" y="81.28"/>
-<instance part="PAD3" gate="1" x="60.96" y="81.28"/>
+<instance part="PAD3" gate="1" x="58.42" y="86.36"/>
 <instance part="PAD4" gate="1" x="53.34" y="81.28"/>
 <instance part="PAD5" gate="1" x="43.18" y="78.74"/>
 <instance part="PAD6" gate="1" x="101.6" y="83.82"/>
 <instance part="PAD7" gate="1" x="104.14" y="78.74"/>
 <instance part="PAD8" gate="1" x="121.92" y="86.36"/>
-<instance part="PAD9" gate="1" x="121.92" y="76.2"/>
+<instance part="PAD9" gate="1" x="127" y="81.28"/>
 <instance part="PAD10" gate="1" x="124.46" y="71.12"/>
-<instance part="PAD11" gate="1" x="43.18" y="78.74"/>
+<instance part="PAD11" gate="1" x="30.48" y="68.58"/>
 <instance part="PAD12" gate="1" x="33.02" y="78.74"/>
 <instance part="PAD13" gate="1" x="35.56" y="86.36"/>
 <instance part="PAD14" gate="1" x="68.58" y="88.9"/>
@@ -1274,12 +1274,6 @@
 <wire x1="58.42" y1="38.1" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="A" pin="3"/>
 <wire x1="58.42" y1="35.56" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="PAD5" gate="1" pin="P"/>
-<pinref part="PAD11" gate="1" pin="P"/>
 </segment>
 </net>
 </nets>

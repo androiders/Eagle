@@ -6623,8 +6623,8 @@ http://www.zetex.com&lt;p&gt;
 <part name="SSR4-" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="R0603"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R0603"/>
-<part name="OW-TMP2" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="OW-TMP3" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="GPIO1" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="GPIO2" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="OC1B" library="wirepad" deviceset="2,54/1,0" device=""/>
 </parts>
 <sheets>
@@ -6681,8 +6681,8 @@ http://www.zetex.com&lt;p&gt;
 <instance part="SSR4-" gate="1" x="96.52" y="-12.7" rot="R90"/>
 <instance part="R3" gate="G$1" x="76.2" y="12.7" rot="R90"/>
 <instance part="R4" gate="G$1" x="91.44" y="12.7" rot="R90"/>
-<instance part="OW-TMP2" gate="1" x="35.56" y="12.7" rot="R180"/>
-<instance part="OW-TMP3" gate="1" x="35.56" y="10.16" rot="R180"/>
+<instance part="GPIO1" gate="1" x="35.56" y="12.7" rot="R180"/>
+<instance part="GPIO2" gate="1" x="35.56" y="10.16" rot="R180"/>
 <instance part="OC1B" gate="P" x="-33.02" y="63.5"/>
 </instances>
 <busses>
@@ -7022,14 +7022,14 @@ http://www.zetex.com&lt;p&gt;
 <net name="N$35" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="(INT1)PD3"/>
-<pinref part="OW-TMP3" gate="1" pin="P"/>
+<pinref part="GPIO2" gate="1" pin="P"/>
 <wire x1="27.94" y1="10.16" x2="33.02" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$34" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="(XCK)PD4"/>
-<pinref part="OW-TMP2" gate="1" pin="P"/>
+<pinref part="GPIO1" gate="1" pin="P"/>
 <wire x1="27.94" y1="12.7" x2="33.02" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>

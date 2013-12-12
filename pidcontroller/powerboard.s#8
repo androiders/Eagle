@@ -959,6 +959,14 @@
 <part name="LCDCONTR" library="wirepad" deviceset="2,54/1,1" device=""/>
 <part name="PAD1" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="PAD2" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD3" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD4" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD5" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD6" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD7" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD8" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD9" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD10" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -989,6 +997,14 @@
 <instance part="LCDCONTR" gate="1" x="55.88" y="38.1"/>
 <instance part="PAD1" gate="1" x="66.04" y="81.28"/>
 <instance part="PAD2" gate="1" x="81.28" y="81.28"/>
+<instance part="PAD3" gate="1" x="60.96" y="81.28"/>
+<instance part="PAD4" gate="1" x="53.34" y="81.28"/>
+<instance part="PAD5" gate="1" x="43.18" y="78.74"/>
+<instance part="PAD6" gate="1" x="101.6" y="83.82"/>
+<instance part="PAD7" gate="1" x="104.14" y="78.74"/>
+<instance part="PAD8" gate="1" x="121.92" y="86.36"/>
+<instance part="PAD9" gate="1" x="121.92" y="76.2"/>
+<instance part="PAD10" gate="1" x="124.46" y="71.12"/>
 </instances>
 <busses>
 </busses>

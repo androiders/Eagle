@@ -974,6 +974,11 @@
 <part name="PAD15" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="PAD16" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="PAD17" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD18" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD19" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD20" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD21" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD22" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1019,6 +1024,11 @@
 <instance part="PAD15" gate="1" x="86.36" y="88.9"/>
 <instance part="PAD16" gate="1" x="116.84" y="73.66"/>
 <instance part="PAD17" gate="1" x="124.46" y="63.5"/>
+<instance part="PAD18" gate="1" x="124.46" y="55.88"/>
+<instance part="PAD19" gate="1" x="124.46" y="48.26"/>
+<instance part="PAD20" gate="1" x="127" y="40.64"/>
+<instance part="PAD21" gate="1" x="121.92" y="27.94"/>
+<instance part="PAD22" gate="1" x="121.92" y="20.32"/>
 </instances>
 <busses>
 </busses>

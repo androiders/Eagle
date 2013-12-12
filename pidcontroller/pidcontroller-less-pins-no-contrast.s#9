@@ -6625,7 +6625,7 @@ http://www.zetex.com&lt;p&gt;
 <part name="R4" library="resistor" deviceset="R-EU_" device="R0603"/>
 <part name="OW-TMP2" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="OW-TMP3" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="VCC1" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="OC1B" library="wirepad" deviceset="2,54/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6683,7 +6683,7 @@ http://www.zetex.com&lt;p&gt;
 <instance part="R4" gate="G$1" x="91.44" y="12.7" rot="R90"/>
 <instance part="OW-TMP2" gate="1" x="35.56" y="12.7" rot="R180"/>
 <instance part="OW-TMP3" gate="1" x="35.56" y="10.16" rot="R180"/>
-<instance part="VCC1" gate="P" x="-33.02" y="63.5"/>
+<instance part="OC1B" gate="P" x="-33.02" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -7031,6 +7031,13 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="(XCK)PD4"/>
 <pinref part="OW-TMP2" gate="1" pin="P"/>
 <wire x1="27.94" y1="12.7" x2="33.02" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PE2(OC1B)"/>
+<pinref part="OC1B" gate="P" pin="P"/>
+<wire x1="-12.7" y1="63.5" x2="-30.48" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

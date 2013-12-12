@@ -812,21 +812,6 @@
 <text x="-1.27" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="1" size="0.0254" layer="27">&gt;VALUE</text>
 </package>
-<package name="2,15/1,0">
-<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<wire x1="1.143" y1="-1.143" x2="1.143" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="-1.143" x2="0.635" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="0.635" x2="1.143" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="1.143" x2="0.635" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.143" x2="-1.143" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-1.143" y1="1.143" x2="-1.143" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.143" y1="-0.635" x2="-1.143" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="-1.143" y1="-1.143" x2="-0.635" y2="-1.143" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="1.016" width="0.1524" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.016" diameter="2.159" shape="octagon"/>
-<text x="-1.143" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="0" y="1" size="0.0254" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="PAD">
@@ -845,22 +830,6 @@
 </gates>
 <devices>
 <device name="" package="2,54/1,1">
-<connects>
-<connect gate="1" pin="P" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="2,15/1,0" prefix="PAD" uservalue="yes">
-<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="PAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="2,15/1,0">
 <connects>
 <connect gate="1" pin="P" pad="1"/>
 </connects>
@@ -3040,32 +3009,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="PAD1" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD2" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD3" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD4" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD5" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD6" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD7" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD8" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD9" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD10" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD11" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD12" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD13" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD14" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD15" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD16" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD17" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD18" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD19" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD20" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD21" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD22" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="R1" library="pot" deviceset="TRIM_EU-" device="LI10"/>
-<part name="PAD23" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD24" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="PAD25" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3093,32 +3037,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="P+3" gate="VCC" x="78.74" y="48.26"/>
 <instance part="GND2" gate="1" x="83.82" y="55.88"/>
 <instance part="GND3" gate="1" x="68.58" y="48.26" rot="R180"/>
-<instance part="PAD1" gate="1" x="66.04" y="81.28"/>
-<instance part="PAD2" gate="1" x="81.28" y="81.28"/>
-<instance part="PAD3" gate="1" x="58.42" y="86.36"/>
-<instance part="PAD4" gate="1" x="53.34" y="81.28"/>
-<instance part="PAD5" gate="1" x="43.18" y="78.74"/>
-<instance part="PAD6" gate="1" x="101.6" y="83.82"/>
-<instance part="PAD7" gate="1" x="104.14" y="78.74"/>
-<instance part="PAD8" gate="1" x="121.92" y="86.36"/>
-<instance part="PAD9" gate="1" x="127" y="81.28"/>
-<instance part="PAD10" gate="1" x="124.46" y="71.12"/>
-<instance part="PAD11" gate="1" x="30.48" y="68.58"/>
-<instance part="PAD12" gate="1" x="33.02" y="78.74"/>
-<instance part="PAD13" gate="1" x="35.56" y="86.36"/>
-<instance part="PAD14" gate="1" x="68.58" y="88.9"/>
-<instance part="PAD15" gate="1" x="86.36" y="88.9"/>
-<instance part="PAD16" gate="1" x="116.84" y="73.66"/>
-<instance part="PAD17" gate="1" x="124.46" y="63.5"/>
-<instance part="PAD18" gate="1" x="124.46" y="55.88"/>
-<instance part="PAD19" gate="1" x="124.46" y="48.26"/>
-<instance part="PAD20" gate="1" x="127" y="40.64"/>
-<instance part="PAD21" gate="1" x="121.92" y="27.94"/>
-<instance part="PAD22" gate="1" x="121.92" y="20.32"/>
 <instance part="R1" gate="1" x="60.96" y="53.34" rot="R270"/>
-<instance part="PAD23" gate="1" x="25.4" y="68.58"/>
-<instance part="PAD24" gate="1" x="25.4" y="73.66"/>
-<instance part="PAD25" gate="1" x="25.4" y="78.74"/>
 </instances>
 <busses>
 </busses>

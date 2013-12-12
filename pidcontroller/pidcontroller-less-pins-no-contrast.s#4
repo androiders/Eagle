@@ -6614,7 +6614,7 @@ http://www.zetex.com&lt;p&gt;
 <part name="E" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="RW" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="RS" library="wirepad" deviceset="2,54/1,0" device=""/>
-<part name="OW-TMP1" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="GPIO4" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="T3" library="zetex" deviceset="NPNSOT23" device=""/>
 <part name="T4" library="zetex" deviceset="NPNSOT23" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -6626,6 +6626,9 @@ http://www.zetex.com&lt;p&gt;
 <part name="GPIO1" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="GPIO2" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="OC1B" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="GPIO5" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="OW-TMP" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="GPIO3" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6672,7 +6675,7 @@ http://www.zetex.com&lt;p&gt;
 <instance part="E" gate="P" x="96.52" y="76.2" rot="R180"/>
 <instance part="RW" gate="P" x="91.44" y="73.66" rot="R180"/>
 <instance part="RS" gate="P" x="86.36" y="71.12" rot="R180"/>
-<instance part="OW-TMP1" gate="1" x="35.56" y="27.94" rot="R180"/>
+<instance part="GPIO4" gate="1" x="-76.2" y="45.72" rot="R270"/>
 <instance part="T3" gate="A" x="76.2" y="-2.54" rot="R270"/>
 <instance part="T4" gate="A" x="91.44" y="-2.54" rot="R270"/>
 <instance part="GND5" gate="1" x="86.36" y="-12.7"/>
@@ -6681,9 +6684,12 @@ http://www.zetex.com&lt;p&gt;
 <instance part="SSR4-" gate="1" x="96.52" y="-12.7" rot="R90"/>
 <instance part="R3" gate="G$1" x="76.2" y="12.7" rot="R90"/>
 <instance part="R4" gate="G$1" x="91.44" y="12.7" rot="R90"/>
-<instance part="GPIO1" gate="1" x="35.56" y="15.24" rot="R180"/>
-<instance part="GPIO2" gate="1" x="35.56" y="10.16" rot="R180"/>
+<instance part="GPIO1" gate="1" x="-78.74" y="15.24" rot="R270"/>
+<instance part="GPIO2" gate="1" x="-73.66" y="15.24" rot="R270"/>
 <instance part="OC1B" gate="P" x="-33.02" y="63.5"/>
+<instance part="GPIO5" gate="1" x="-71.12" y="45.72" rot="R270"/>
+<instance part="OW-TMP" gate="1" x="-66.04" y="45.72" rot="R270"/>
+<instance part="GPIO3" gate="1" x="-68.58" y="15.24" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -6970,13 +6976,6 @@ http://www.zetex.com&lt;p&gt;
 <wire x1="91.44" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="(OC1A)PD5"/>
-<pinref part="OW-TMP1" gate="1" pin="P"/>
-<wire x1="27.94" y1="15.24" x2="33.02" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$28" class="0">
 <segment>
 <pinref part="SSR3-" gate="1" pin="P"/>
@@ -7021,25 +7020,71 @@ http://www.zetex.com&lt;p&gt;
 <wire x1="91.44" y1="35.56" x2="91.44" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$35" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="(INT1)PD3"/>
-<pinref part="GPIO2" gate="1" pin="P"/>
-<wire x1="27.94" y1="10.16" x2="33.02" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="(XCK)PD4"/>
-<pinref part="GPIO1" gate="1" pin="P"/>
-<wire x1="27.94" y1="12.7" x2="33.02" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$36" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PE2(OC1B)"/>
 <pinref part="OC1B" gate="P" pin="P"/>
 <wire x1="-12.7" y1="63.5" x2="-30.48" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(INT0)PD2"/>
+<wire x1="27.94" y1="7.62" x2="30.48" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GPIO1" gate="1" pin="P"/>
+<wire x1="-78.74" y1="12.7" x2="-78.74" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD3" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(INT1)PD3"/>
+<wire x1="27.94" y1="10.16" x2="30.48" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GPIO2" gate="1" pin="P"/>
+<wire x1="-73.66" y1="12.7" x2="-73.66" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(XCK)PD4"/>
+<wire x1="27.94" y1="12.7" x2="30.48" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GPIO3" gate="1" pin="P"/>
+<wire x1="-68.58" y1="12.7" x2="-68.58" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD5" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(OC1A)PD5"/>
+<wire x1="27.94" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GPIO4" gate="1" pin="P"/>
+<wire x1="-76.2" y1="43.18" x2="-76.2" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD6" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(WR)PD6"/>
+<wire x1="27.94" y1="17.78" x2="30.48" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GPIO5" gate="1" pin="P"/>
+<wire x1="-71.12" y1="43.18" x2="-71.12" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PD7" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="(RD)PD7"/>
+<wire x1="27.94" y1="20.32" x2="30.48" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="OW-TMP" gate="1" pin="P"/>
+<wire x1="-66.04" y1="43.18" x2="-66.04" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

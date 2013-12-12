@@ -967,6 +967,13 @@
 <part name="PAD8" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="PAD9" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="PAD10" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD11" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD12" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD13" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD14" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD15" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD16" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="PAD17" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1005,6 +1012,13 @@
 <instance part="PAD8" gate="1" x="121.92" y="86.36"/>
 <instance part="PAD9" gate="1" x="121.92" y="76.2"/>
 <instance part="PAD10" gate="1" x="124.46" y="71.12"/>
+<instance part="PAD11" gate="1" x="43.18" y="78.74"/>
+<instance part="PAD12" gate="1" x="33.02" y="78.74"/>
+<instance part="PAD13" gate="1" x="35.56" y="86.36"/>
+<instance part="PAD14" gate="1" x="68.58" y="88.9"/>
+<instance part="PAD15" gate="1" x="86.36" y="88.9"/>
+<instance part="PAD16" gate="1" x="116.84" y="73.66"/>
+<instance part="PAD17" gate="1" x="124.46" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -1260,6 +1274,12 @@
 <wire x1="58.42" y1="38.1" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="A" pin="3"/>
 <wire x1="58.42" y1="35.56" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="PAD5" gate="1" pin="P"/>
+<pinref part="PAD11" gate="1" pin="P"/>
 </segment>
 </net>
 </nets>

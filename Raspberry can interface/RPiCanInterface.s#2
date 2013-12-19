@@ -4340,6 +4340,21 @@ Reichelt
 <text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
 </package>
+<package name="3,17/1,1">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="1.524" y1="-1.016" x2="1.524" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="-1.524" x2="1.016" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-1.524" x2="-1.524" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="-1.524" x2="-1.524" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="1.016" x2="-1.524" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="1.524" x2="-1.016" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="1.524" x2="1.524" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="1.524" x2="1.524" y2="1.016" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="1.27" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1176" diameter="3.175" shape="octagon"/>
+<text x="-1.524" y="1.905" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="1.2" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="PAD">
@@ -4367,6 +4382,22 @@ Reichelt
 </device>
 </devices>
 </deviceset>
+<deviceset name="3,17/1,1" prefix="PAD" uservalue="yes">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3,17/1,1">
+<connects>
+<connect gate="1" pin="P" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -4387,8 +4418,10 @@ Reichelt
 <part name="R4" library="rcl" deviceset="R-EU_" device="0207/7"/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="0207/7"/>
 <part name="Q1" library="murata-resonators" deviceset="CSTLA_T" device=""/>
+<part name="+5V" library="supply1" deviceset="VCC" device="" value="+5V"/>
 <part name="AFADSF" library="supply1" deviceset="VCC" device="" value="+3V3"/>
 <part name="P+4" library="supply1" deviceset="VCC" device="" value="+3V3"/>
+<part name="P+5" library="supply1" deviceset="VCC" device="" value="+5v"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
@@ -4398,13 +4431,13 @@ Reichelt
 <part name="RPI-SI" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="RPI-SCK" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="RPI-SO" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="GND" library="wirepad" deviceset="1,6/0,8" device="" value="GND"/>
-<part name="CANL" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="CANH" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD7" library="wirepad" deviceset="1,6/0,8" device="" value="GND"/>
+<part name="PAD8" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD9" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD1" library="wirepad" deviceset="3,17/1,1" device="" value="+5v"/>
 <part name="AFADSF1" library="supply1" deviceset="VCC" device="" value="+3V3"/>
 <part name="P+1" library="supply1" deviceset="VCC" device="" value="+3V3"/>
 <part name="AFADSF2" library="supply1" deviceset="VCC" device="" value="+3V3"/>
-<part name="V5" library="wirepad" deviceset="1,6/0,8" device="" value="+5V"/>
 </parts>
 <sheets>
 <sheet>
@@ -4419,8 +4452,10 @@ Reichelt
 <instance part="R4" gate="G$1" x="20.32" y="78.74" rot="R90"/>
 <instance part="R5" gate="G$1" x="12.7" y="78.74" rot="R90"/>
 <instance part="Q1" gate="G$1" x="68.58" y="50.8" rot="R90"/>
+<instance part="+5V" gate="VCC" x="162.56" y="76.2"/>
 <instance part="AFADSF" gate="VCC" x="20.32" y="88.9"/>
 <instance part="P+4" gate="VCC" x="27.94" y="88.9"/>
+<instance part="P+5" gate="VCC" x="-5.08" y="88.9"/>
 <instance part="GND1" gate="1" x="7.62" y="33.02"/>
 <instance part="GND3" gate="1" x="83.82" y="45.72"/>
 <instance part="GND4" gate="1" x="60.96" y="35.56"/>
@@ -4430,14 +4465,14 @@ Reichelt
 <instance part="RPI-SI" gate="P" x="-10.16" y="66.04"/>
 <instance part="RPI-SCK" gate="P" x="-10.16" y="60.96"/>
 <instance part="RPI-SO" gate="P" x="-10.16" y="71.12"/>
-<instance part="GND" gate="P" x="0" y="40.64"/>
-<instance part="CANL" gate="P" x="154.94" y="63.5" rot="R180"/>
-<instance part="CANH" gate="P" x="154.94" y="58.42" rot="R180"/>
+<instance part="PAD7" gate="P" x="0" y="40.64"/>
+<instance part="PAD8" gate="P" x="154.94" y="63.5" rot="R180"/>
+<instance part="PAD9" gate="P" x="154.94" y="58.42" rot="R180"/>
 <instance part="U$1" gate="G$2" x="162.56" y="60.96"/>
+<instance part="PAD1" gate="1" x="-5.08" y="78.74" rot="R90"/>
 <instance part="AFADSF1" gate="VCC" x="5.08" y="88.9"/>
 <instance part="P+1" gate="VCC" x="58.42" y="83.82"/>
 <instance part="AFADSF2" gate="VCC" x="12.7" y="88.9"/>
-<instance part="V5" gate="P" x="162.56" y="76.2" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -4494,7 +4529,7 @@ Reichelt
 <wire x1="162.56" y1="48.26" x2="162.56" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND" gate="P" pin="P"/>
+<pinref part="PAD7" gate="P" pin="P"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="2.54" y1="40.64" x2="7.62" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="40.64" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
@@ -4525,14 +4560,14 @@ Reichelt
 <net name="N$6" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CANL"/>
-<pinref part="CANL" gate="P" pin="P"/>
+<pinref part="PAD8" gate="P" pin="P"/>
 <wire x1="134.62" y1="63.5" x2="152.4" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CANH"/>
-<pinref part="CANH" gate="P" pin="P"/>
+<pinref part="PAD9" gate="P" pin="P"/>
 <wire x1="134.62" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -4564,6 +4599,16 @@ Reichelt
 </segment>
 </net>
 <net name="VCC" class="0">
+<segment>
+<pinref part="U$1" gate="G$2" pin="VCC"/>
+<pinref part="+5V" gate="VCC" pin="VCC"/>
+<wire x1="162.56" y1="68.58" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PAD1" gate="1" pin="P"/>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<wire x1="-5.08" y1="81.28" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
+</segment>
 <segment>
 <pinref part="+3V3" gate="P" pin="P"/>
 <pinref part="AFADSF1" gate="VCC" pin="VCC"/>
@@ -4603,13 +4648,6 @@ Reichelt
 <pinref part="IC1" gate="G$1" pin="SCK"/>
 <pinref part="RPI-SCK" gate="P" pin="P"/>
 <wire x1="27.94" y1="60.96" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="U$1" gate="G$2" pin="VCC"/>
-<pinref part="V5" gate="P" pin="P"/>
-<wire x1="162.56" y1="68.58" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

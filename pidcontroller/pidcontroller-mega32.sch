@@ -9391,7 +9391,7 @@ W = angled&lt;p&gt;
 <instance part="R3" gate="1" x="48.26" y="104.14"/>
 <instance part="P+11" gate="VCC" x="48.26" y="93.98" rot="R180"/>
 <instance part="GND9" gate="1" x="48.26" y="114.3" rot="R180"/>
-<instance part="OW-TMP" gate="1" x="93.98" y="25.4" rot="R90"/>
+<instance part="OW-TMP" gate="1" x="66.04" y="55.88" rot="R180"/>
 <instance part="IC3" gate="G$1" x="27.94" y="45.72"/>
 <instance part="5VIN" gate="G$1" x="-40.64" y="71.12"/>
 <instance part="SV1" gate="1" x="111.76" y="83.82" rot="R180"/>
@@ -9751,6 +9751,13 @@ W = angled&lt;p&gt;
 <pinref part="R3" gate="1" pin="S"/>
 <wire x1="63.5" y1="91.44" x2="63.5" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="104.14" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="IC3" gate="G$1" pin="(AIN1/OC0)PB3"/>
+<pinref part="OW-TMP" gate="1" pin="P"/>
+<wire x1="48.26" y1="55.88" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

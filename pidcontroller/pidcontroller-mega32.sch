@@ -9447,17 +9447,16 @@ W = angled&lt;p&gt;
 <label x="-30.48" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<wire x1="99.06" y1="63.5" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="SV3" gate="1" pin="6"/>
-<wire x1="96.52" y1="63.5" x2="96.52" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="48.26" x2="104.14" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <pinref part="SV1" gate="1" pin="3"/>
 <wire x1="96.52" y1="101.6" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="88.9" x2="104.14" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<pinref part="SV3" gate="1" pin="5"/>
+<wire x1="99.06" y1="63.5" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="50.8" x2="104.14" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9528,16 +9527,16 @@ W = angled&lt;p&gt;
 <label x="-30.48" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="SV3" gate="1" pin="5"/>
-<wire x1="99.06" y1="43.18" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="50.8" x2="104.14" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SV1" gate="1" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="104.14" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="93.98" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="SV3" gate="1" pin="6"/>
+<wire x1="99.06" y1="43.18" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="48.26" x2="104.14" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">

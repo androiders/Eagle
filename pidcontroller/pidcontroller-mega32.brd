@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2023,6 +2023,12 @@ design rules under a new name.</description>
 <element name="JP5" library="pinhead" package="1X01" value="" x="21" y="5"/>
 <element name="JP6" library="pinhead" package="1X01" value="" x="21" y="11"/>
 <element name="JP7" library="pinhead" package="1X01" value="" x="21" y="17"/>
+<element name="BTNUP" library="wirepad" package="2,15/1,0" value="" x="39" y="24"/>
+<element name="BTNDN" library="wirepad" package="2,15/1,0" value="" x="39" y="28"/>
+<element name="BTNOK" library="wirepad" package="2,15/1,0" value="" x="39" y="32"/>
+<element name="R4" library="resistor" package="R0603" value="" x="34" y="24" rot="R180"/>
+<element name="R5" library="resistor" package="R0603" value="" x="34" y="28" rot="R180"/>
+<element name="R6" library="resistor" package="R0603" value="" x="34" y="32" rot="R180"/>
 </elements>
 <signals>
 <signal name="VCC">
@@ -2120,6 +2126,9 @@ design rules under a new name.</description>
 <vertex x="100" y="1"/>
 <vertex x="100" y="75"/>
 </polygon>
+<contactref element="R6" pad="2"/>
+<contactref element="R5" pad="2"/>
+<contactref element="R4" pad="2"/>
 </signal>
 <signal name="N$9">
 <contactref element="C4" pad="2"/>
@@ -2308,9 +2317,8 @@ design rules under a new name.</description>
 <signal name="N$4">
 <contactref element="IC3" pad="14"/>
 <contactref element="R1" pad="2"/>
-<wire x1="50.8" y1="24.218" x2="50.8" y2="29.464" width="0.4064" layer="1"/>
-<wire x1="50.8" y1="29.464" x2="52.21" y2="29.464" width="0.4064" layer="1"/>
-<wire x1="52.21" y1="29.464" x2="52.21" y2="32.3" width="0.4064" layer="1"/>
+<wire x1="52.21" y1="32.3" x2="52.21" y2="24.218" width="0.4064" layer="1"/>
+<wire x1="52.21" y1="24.218" x2="50.8" y2="24.218" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="IC3" pad="16"/>
@@ -2394,6 +2402,33 @@ design rules under a new name.</description>
 <contactref element="JP2" pad="1"/>
 <wire x1="39" y1="5" x2="31.27" y2="5" width="0.4064" layer="1"/>
 <wire x1="31.27" y1="5" x2="31.27" y2="8.46" width="0.4064" layer="1"/>
+</signal>
+<signal name="BTNUP">
+<contactref element="R4" pad="1"/>
+<contactref element="BTNUP" pad="1"/>
+<contactref element="IC3" pad="13"/>
+<wire x1="51.41" y1="32.3" x2="51.41" y2="26" width="0.4064" layer="1"/>
+<wire x1="51.41" y1="26" x2="41" y2="26" width="0.4064" layer="1"/>
+<wire x1="41" y1="26" x2="41" y2="24" width="0.4064" layer="1"/>
+<wire x1="41" y1="24" x2="39" y2="24" width="0.4064" layer="1"/>
+<wire x1="34.85" y1="24" x2="39" y2="24" width="0.4064" layer="1"/>
+</signal>
+<signal name="BTNDN">
+<contactref element="R5" pad="1"/>
+<contactref element="BTNDN" pad="1"/>
+<contactref element="IC3" pad="12"/>
+<wire x1="50.61" y1="32.3" x2="50.61" y2="28" width="0.4064" layer="1"/>
+<wire x1="50.61" y1="28" x2="39" y2="28" width="0.4064" layer="1"/>
+<wire x1="34.85" y1="28" x2="39" y2="28" width="0.4064" layer="1"/>
+</signal>
+<signal name="BTNOK">
+<contactref element="R6" pad="1"/>
+<contactref element="BTNOK" pad="1"/>
+<contactref element="IC3" pad="11"/>
+<wire x1="48.81" y1="34.1" x2="41" y2="34.1" width="0.4064" layer="1"/>
+<wire x1="41" y1="34.1" x2="41" y2="32" width="0.4064" layer="1"/>
+<wire x1="41" y1="32" x2="39" y2="32" width="0.4064" layer="1"/>
+<wire x1="34.85" y1="32" x2="39" y2="32" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>

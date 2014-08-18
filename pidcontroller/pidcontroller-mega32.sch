@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9541,6 +9541,13 @@ W = angled&lt;p&gt;
 <part name="JP5" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP6" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP7" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="BTNUP" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="BTNDN" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="BTNOK" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="R4" library="resistor" deviceset="R-EU_" device="R0603"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0603"/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="R0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -9588,6 +9595,13 @@ W = angled&lt;p&gt;
 <instance part="JP5" gate="G$1" x="175.26" y="114.3" rot="R90"/>
 <instance part="JP6" gate="G$1" x="175.26" y="101.6" rot="R90"/>
 <instance part="JP7" gate="G$1" x="175.26" y="88.9" rot="R90"/>
+<instance part="GND8" gate="1" x="185.42" y="35.56"/>
+<instance part="BTNUP" gate="1" x="208.28" y="66.04" rot="R180"/>
+<instance part="BTNDN" gate="1" x="208.28" y="55.88" rot="R180"/>
+<instance part="BTNOK" gate="1" x="208.28" y="45.72" rot="R180"/>
+<instance part="R4" gate="G$1" x="190.5" y="66.04" rot="R180"/>
+<instance part="R5" gate="G$1" x="190.5" y="55.88" rot="R180"/>
+<instance part="R6" gate="G$1" x="190.5" y="45.72" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -9724,6 +9738,17 @@ W = angled&lt;p&gt;
 <pinref part="SV3" gate="1" pin="6"/>
 <wire x1="99.06" y1="43.18" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="48.26" x2="104.14" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="38.1" x2="185.42" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="45.72" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
+<junction x="185.42" y="45.72"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="55.88" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<junction x="185.42" y="55.88"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -9997,6 +10022,39 @@ W = angled&lt;p&gt;
 <wire x1="144.78" y1="101.6" x2="144.78" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="106.68" x2="134.62" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BTNUP" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="BTNUP" gate="1" pin="P"/>
+<wire x1="195.58" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="(OC1B)PD4"/>
+<wire x1="48.26" y1="12.7" x2="53.34" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BTNDN" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="BTNDN" gate="1" pin="P"/>
+<wire x1="195.58" y1="55.88" x2="205.74" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="(INT1)PD3"/>
+<wire x1="48.26" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BTNOK" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="BTNOK" gate="1" pin="P"/>
+<wire x1="195.58" y1="45.72" x2="205.74" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="(INT0)PD2"/>
+<wire x1="48.26" y1="7.62" x2="53.34" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

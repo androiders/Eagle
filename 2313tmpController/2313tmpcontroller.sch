@@ -617,21 +617,6 @@ W = angled&lt;p&gt;
 <rectangle x1="5.969" y1="-2.921" x2="6.731" y2="-1.905" layer="21"/>
 <rectangle x1="8.509" y1="-2.921" x2="9.271" y2="-1.905" layer="21"/>
 </package>
-<package name="1X01">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.016" shape="octagon"/>
-<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="PINHD8">
@@ -649,15 +634,6 @@ W = angled&lt;p&gt;
 <pin name="6" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="7" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="8" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="PINHD1">
-<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -692,22 +668,6 @@ W = angled&lt;p&gt;
 <connect gate="A" pin="6" pad="6"/>
 <connect gate="A" pin="7" pad="7"/>
 <connect gate="A" pin="8" pad="8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="PINHD-1X1" prefix="JP" uservalue="yes">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X01">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2478,6 +2438,22 @@ naming: grid - package width</description>
 <device name="SMD2,54-5,08" package="SMD2,54-5,08">
 <connects>
 <connect gate="G$1" pin="P" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2,54/0,8" prefix="PAD" uservalue="yes">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<gates>
+<gate name="P" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2,54/0,8">
+<connects>
+<connect gate="P" pin="P" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7415,10 +7391,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="T2" library="transistor" deviceset="BD139" device=""/>
 <part name="T3" library="transistor" deviceset="BD139" device=""/>
 <part name="T4" library="transistor" deviceset="BD139" device=""/>
-<part name="RSTBTN" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="0207/7"/>
-<part name="VCCIN" library="pinhead" deviceset="PINHD-1X1" device=""/>
-<part name="GNDIN" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="PAD1" library="wirepad" deviceset="WIREPAD" device="2,15/1,0"/>
 <part name="PAD2" library="wirepad" deviceset="WIREPAD" device="2,15/1,0"/>
 <part name="PAD3" library="wirepad" deviceset="WIREPAD" device="2,15/1,0"/>
@@ -7431,6 +7404,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="PAD10" library="wirepad" deviceset="WIREPAD" device="2,15/1,0"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="0207/7"/>
 <part name="LED1" library="led" deviceset="LED" device="B153"/>
+<part name="VCCIN" library="wirepad" deviceset="2,54/0,8" device=""/>
+<part name="GNDIN" library="wirepad" deviceset="2,54/0,8" device=""/>
+<part name="RSTBTN" library="wirepad" deviceset="2,54/0,8" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7459,10 +7435,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="T2" gate="G$1" x="104.14" y="-7.62" rot="R270"/>
 <instance part="T3" gate="G$1" x="119.38" y="-7.62" rot="R270"/>
 <instance part="T4" gate="G$1" x="134.62" y="-7.62" rot="R270"/>
-<instance part="RSTBTN" gate="G$1" x="30.48" y="93.98" rot="R90"/>
 <instance part="R5" gate="G$1" x="43.18" y="88.9" rot="R90"/>
-<instance part="VCCIN" gate="G$1" x="160.02" y="91.44"/>
-<instance part="GNDIN" gate="G$1" x="160.02" y="73.66"/>
 <instance part="PAD1" gate="G$1" x="96.52" y="48.26" rot="R270"/>
 <instance part="PAD2" gate="G$1" x="106.68" y="48.26" rot="R270"/>
 <instance part="PAD3" gate="G$1" x="139.7" y="-17.78" rot="R90"/>
@@ -7475,6 +7448,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="PAD10" gate="G$1" x="83.82" y="-17.78" rot="R90"/>
 <instance part="R6" gate="G$1" x="116.84" y="96.52" rot="R90"/>
 <instance part="LED1" gate="G$1" x="116.84" y="83.82"/>
+<instance part="VCCIN" gate="P" x="162.56" y="91.44" rot="R180"/>
+<instance part="GNDIN" gate="P" x="162.56" y="73.66" rot="R180"/>
+<instance part="RSTBTN" gate="P" x="30.48" y="96.52" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -7519,14 +7495,14 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<pinref part="VCCIN" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="91.44" x2="134.62" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="101.6" x2="124.46" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="101.6" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
 <junction x="134.62" y="91.44"/>
+<pinref part="VCCIN" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7570,13 +7546,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="GNDIN" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="73.66" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="73.66" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="73.66" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="116.84" y1="78.74" x2="134.62" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="78.74" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
 <junction x="134.62" y="73.66"/>
+<pinref part="GNDIN" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7741,10 +7717,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <junction x="55.88" y="68.58"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="RSTBTN" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="91.44" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="93.98" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
 <junction x="43.18" y="83.82"/>
+<pinref part="RSTBTN" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$18" class="0">
